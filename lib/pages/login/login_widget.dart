@@ -259,7 +259,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                 BorderRadius.circular(12.0),
                                           ),
                                           filled: true,
-                                          fillColor: Color(0xFFF1F4F8),
+                                          fillColor: Color(0xFFF7F8F9),
                                           suffixIcon: InkWell(
                                             onTap: () => setState(
                                               () => _model.passwordVisibility =
