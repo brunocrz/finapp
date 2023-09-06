@@ -58,7 +58,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                   child: Text(
-                    'Hello World',
+                    'Essa é a homepage',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
                           color: Colors.white,
