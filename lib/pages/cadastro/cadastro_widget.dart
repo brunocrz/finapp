@@ -46,7 +46,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
       onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        backgroundColor: Colors.white,
         body: SafeArea(
           top: true,
           child: Row(
