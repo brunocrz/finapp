@@ -329,7 +329,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         }
 
                                         context.goNamedAuth(
-                                            'login', context.mounted);
+                                            'homePage', context.mounted);
                                       },
                                       text: 'Entrar',
                                       options: FFButtonOptions(
