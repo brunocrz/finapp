@@ -605,6 +605,12 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                                     fontSize: 18.0,
                                                     fontWeight: FontWeight.bold,
                                                   ),
+                                              mouseCursor:
+                                                  SystemMouseCursors.click,
+                                              recognizer: TapGestureRecognizer()
+                                                ..onTap = () async {
+                                                  context.pushNamed('login');
+                                                },
                                             )
                                           ],
                                           style: TextStyle(
