@@ -95,6 +95,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Login',
           path: '/login',
           builder: (context, params) => LoginWidget(),
+        ),
+        FFRoute(
+          name: 'onboard',
+          path: '/onboard',
+          builder: (context, params) => OnboardWidget(),
+        ),
+        FFRoute(
+          name: 'cadastro',
+          path: '/cadastro',
+          builder: (context, params) => CadastroWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
