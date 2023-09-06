@@ -110,8 +110,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         'Olá\nSeja Bem-vindo! ',
                                         style: TextStyle(
                                           fontFamily: 'SF Pro Display',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
+                                          color: Colors.black,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 30.0,
                                         ),
@@ -140,9 +139,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
+                                              color: Color(0xFFE8ECF4),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -150,9 +147,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
+                                              color: Colors.black,
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -184,8 +179,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         ),
                                         style: TextStyle(
                                           fontFamily: 'SF Pro Display',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
+                                          color: Colors.black,
                                           fontWeight: FontWeight.w500,
                                           fontSize: 16.0,
                                         ),
@@ -218,9 +212,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
+                                              color: Color(0xFFE8ECF4),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -228,9 +220,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
+                                              color: Colors.black,
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -278,8 +268,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         ),
                                         style: TextStyle(
                                           fontFamily: 'SF Pro Display',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
+                                          color: Colors.black,
                                           fontWeight: FontWeight.w500,
                                           fontSize: 16.0,
                                         ),
