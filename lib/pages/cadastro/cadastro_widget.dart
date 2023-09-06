@@ -90,8 +90,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                       'Registre-se para começar',
                                       style: TextStyle(
                                         fontFamily: 'SF Pro Display',
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
+                                        color: Colors.black,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 30.0,
                                       ),
@@ -119,9 +118,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                           ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
+                                              color: Color(0xFFE8ECF4),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -129,9 +126,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
+                                              color: Colors.black,
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -163,8 +158,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                         ),
                                         style: TextStyle(
                                           fontFamily: 'SF Pro Display',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
+                                          color: Colors.black,
                                           fontSize: 16.0,
                                         ),
                                         keyboardType:
@@ -195,9 +189,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                           ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
+                                              color: Color(0xFFE8ECF4),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -205,9 +197,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
+                                              color: Colors.black,
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -257,8 +247,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                         ),
                                         style: TextStyle(
                                           fontFamily: 'SF Pro Display',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
+                                          color: Colors.black,
                                           fontSize: 16.0,
                                         ),
                                         validator: _model
@@ -289,9 +278,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                           ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
+                                              color: Color(0xFFE8ECF4),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -299,9 +286,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
+                                              color: Colors.black,
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -353,8 +338,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                         ),
                                         style: TextStyle(
                                           fontFamily: 'SF Pro Display',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
+                                          color: Colors.black,
                                           fontSize: 16.0,
                                         ),
                                         minLines: 1,
@@ -457,9 +441,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                               width: 105.0,
                                               height: 32.0,
                                               decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryBackground,
+                                                color: Colors.white,
                                               ),
                                               alignment: AlignmentDirectional(
                                                   0.0, 0.0),
@@ -507,12 +489,10 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                         iconPadding:
                                             EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
+                                        color: Colors.white,
                                         textStyle: TextStyle(
                                           fontFamily: 'SF Pro Display',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
+                                          color: Colors.black,
                                           fontSize: 16.0,
                                         ),
                                         elevation: 0.0,
@@ -559,14 +539,10 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
+                                              color: Colors.white,
                                               textStyle: TextStyle(
                                                 fontFamily: 'SF Pro Display',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
+                                                color: Colors.black,
                                                 fontSize: 16.0,
                                               ),
                                               elevation: 0.0,
@@ -608,9 +584,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                               text: 'Entrar',
                                               style: TextStyle(
                                                 fontFamily: 'SF Pro Display',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
+                                                color: Colors.black,
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 16.0,
                                               ),
