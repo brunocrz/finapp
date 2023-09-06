@@ -106,15 +106,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         0.0, 0.0, 0.0, 36.0),
                                     child: Text(
                                       'Bem-vindo de volta! \nQue bom ver você, de novo!',
-                                      style: FlutterFlowTheme.of(context)
-                                          .headlineLarge
-                                          .override(
-                                            fontFamily: 'SF Pro Display',
-                                            color: Color(0xFF101213),
-                                            fontSize: 30.0,
-                                            fontWeight: FontWeight.bold,
-                                            useGoogleFonts: false,
-                                          ),
+                                      style: TextStyle(
+                                        fontFamily: 'SF Pro Display',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30.0,
+                                      ),
                                     ),
                                   ),
                                   Padding(
@@ -130,20 +128,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelText: 'Digite seu e-mail',
-                                          labelStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelLarge
-                                                  .override(
-                                                    fontFamily:
-                                                        'SF Pro Display',
-                                                    color: Color(0xFF57636C),
-                                                    fontSize: 16.0,
-                                                    fontWeight: FontWeight.w500,
-                                                    useGoogleFonts: false,
-                                                  ),
+                                          labelStyle: TextStyle(
+                                            fontFamily: 'SF Pro Display',
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 16.0,
+                                          ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFE8ECF4),
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .alternate,
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -151,7 +147,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Colors.black,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -181,15 +179,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           filled: true,
                                           fillColor: Color(0xFFF7F8F9),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyLarge
-                                            .override(
-                                              fontFamily: 'SF Pro Display',
-                                              color: Color(0xFF101213),
-                                              fontSize: 16.0,
-                                              fontWeight: FontWeight.w500,
-                                              useGoogleFonts: false,
-                                            ),
+                                        style: TextStyle(
+                                          fontFamily: 'SF Pro Display',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 16.0,
+                                        ),
                                         keyboardType:
                                             TextInputType.emailAddress,
                                         validator: _model
@@ -210,20 +206,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         obscureText: !_model.passwordVisibility,
                                         decoration: InputDecoration(
                                           labelText: 'Digite sua senha',
-                                          labelStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .labelLarge
-                                                  .override(
-                                                    fontFamily:
-                                                        'SF Pro Display',
-                                                    color: Color(0xFF57636C),
-                                                    fontSize: 16.0,
-                                                    fontWeight: FontWeight.w500,
-                                                    useGoogleFonts: false,
-                                                  ),
+                                          labelStyle: TextStyle(
+                                            fontFamily: 'SF Pro Display',
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 16.0,
+                                          ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFE8ECF4),
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .alternate,
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -231,7 +225,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Colors.black,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -277,15 +273,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             ),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyLarge
-                                            .override(
-                                              fontFamily: 'SF Pro Display',
-                                              color: Color(0xFF101213),
-                                              fontSize: 16.0,
-                                              fontWeight: FontWeight.w500,
-                                              useGoogleFonts: false,
-                                            ),
+                                        style: TextStyle(
+                                          fontFamily: 'SF Pro Display',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 16.0,
+                                        ),
                                         validator: _model
                                             .passwordControllerValidator
                                             .asValidator(context),
@@ -300,14 +294,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       child: Text(
                                         'Esqueceu sua senha?',
                                         textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'SF Pro Display',
-                                              color: Color(0xFF8391A1),
-                                              fontWeight: FontWeight.w500,
-                                              useGoogleFonts: false,
-                                            ),
+                                        style: TextStyle(
+                                          fontFamily: 'SF Pro Display',
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 16.0,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -389,7 +382,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             alignment:
                                                 AlignmentDirectional(0.0, 0.0),
                                             child: Container(
-                                              width: 82.0,
+                                              width: 105.0,
                                               height: 32.0,
                                               decoration: BoxDecoration(
                                                 color: Colors.white,
@@ -397,20 +390,15 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Text(
-                                                'Ou entre com',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'SF Pro Display',
-                                                          color:
-                                                              Color(0xFF8391A1),
-                                                          fontSize: 14.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          useGoogleFonts: false,
-                                                        ),
+                                                'ou entre com',
+                                                style: TextStyle(
+                                                  fontFamily: 'SF Pro Display',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: 16.0,
+                                                ),
                                               ),
                                             ),
                                           ),
