@@ -427,9 +427,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                                 width: double.infinity,
                                                 height: 2.0,
                                                 decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .alternate,
+                                                  color: Color(0xFFF1F4F8),
                                                 ),
                                               ),
                                             ),
@@ -497,8 +495,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                         ),
                                         elevation: 0.0,
                                         borderSide: BorderSide(
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
+                                          color: Color(0xFFE8ECF4),
                                           width: 2.0,
                                         ),
                                         borderRadius:
