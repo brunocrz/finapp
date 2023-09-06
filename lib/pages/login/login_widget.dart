@@ -83,25 +83,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                               ),
                             ),
                           ),
-                        if (responsiveVisibility(
-                          context: context,
-                          tabletLandscape: false,
-                          desktop: false,
-                        ))
-                          Container(
-                            width: double.infinity,
-                            height: 78.0,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(16.0),
-                                bottomRight: Radius.circular(16.0),
-                                topLeft: Radius.circular(0.0),
-                                topRight: Radius.circular(0.0),
-                              ),
-                            ),
-                            alignment: AlignmentDirectional(-1.0, 0.0),
-                          ),
                         Container(
                           width: double.infinity,
                           constraints: BoxConstraints(
@@ -114,10 +95,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                             alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 24.0, 24.0, 24.0),
+                                  24.0, 32.0, 24.0, 32.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
@@ -566,7 +548,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       ),
                                     ),
                                   ),
-                                ],
+                                ].divide(SizedBox(height: 0.0)),
                               ),
                             ),
                           ),
