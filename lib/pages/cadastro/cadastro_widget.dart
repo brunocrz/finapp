@@ -72,8 +72,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                             maxWidth: 430.0,
                           ),
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
+                            color: Colors.white,
                           ),
                           child: Align(
                             alignment: AlignmentDirectional(0.0, 0.0),
