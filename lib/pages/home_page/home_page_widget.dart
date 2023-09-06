@@ -53,7 +53,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     onTap: () async {
-                      context.pushNamed('homePage');
+                      context.pushNamed('login');
                     },
                     child: Text(
                       'Essa é a homepage',
@@ -63,13 +63,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                     ),
                   ),
-                ),
-              ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
                 ),
               ),
             ],
