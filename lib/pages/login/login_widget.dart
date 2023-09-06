@@ -552,6 +552,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                             FontWeight.bold,
                                                         useGoogleFonts: false,
                                                       ),
+                                              mouseCursor:
+                                                  SystemMouseCursors.click,
+                                              recognizer: TapGestureRecognizer()
+                                                ..onTap = () async {
+                                                  context.pushNamed('cadastro');
+                                                },
                                             )
                                           ],
                                           style: FlutterFlowTheme.of(context)
