@@ -101,17 +101,20 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 36.0),
-                                    child: Text(
-                                      'Bem-vindo de volta! \nQue bom ver você, de novo!',
-                                      style: TextStyle(
-                                        fontFamily: 'SF Pro Display',
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 30.0,
+                                  Align(
+                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 36.0),
+                                      child: Text(
+                                        'Olá\nSeja Bem-vindo! ',
+                                        style: TextStyle(
+                                          fontFamily: 'SF Pro Display',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 30.0,
+                                        ),
                                       ),
                                     ),
                                   ),

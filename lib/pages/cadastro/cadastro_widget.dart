@@ -87,7 +87,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 36.0),
                                     child: Text(
-                                      'Olá! \nRegistre-se para começar',
+                                      'Registre-se para começar',
                                       style: TextStyle(
                                         fontFamily: 'SF Pro Display',
                                         color: FlutterFlowTheme.of(context)
