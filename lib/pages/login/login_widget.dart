@@ -103,7 +103,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 children: [
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 16.0),
+                                        0.0, 0.0, 0.0, 36.0),
                                     child: Text(
                                       'Bem-vindo de volta! \nQue bom ver você, de novo!',
                                       style: FlutterFlowTheme.of(context)
@@ -223,7 +223,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
-                                              color: Color(0xFFF1F4F8),
+                                              color: Color(0xFFE8ECF4),
                                               width: 2.0,
                                             ),
                                             borderRadius:
@@ -292,9 +292,28 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       ),
                                     ),
                                   ),
+                                  Align(
+                                    alignment: AlignmentDirectional(1.0, 0.0),
+                                    child: Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 30.0),
+                                      child: Text(
+                                        'Esqueceu sua senha?',
+                                        textAlign: TextAlign.start,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'SF Pro Display',
+                                              color: Color(0xFF8391A1),
+                                              fontWeight: FontWeight.w500,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
+                                    ),
+                                  ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 16.0),
+                                        0.0, 0.0, 0.0, 30.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
                                         GoRouter.of(context).prepareAuthEvent();
@@ -343,7 +362,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 24.0),
+                                        0.0, 0.0, 0.0, 30.0),
                                     child: Container(
                                       width: 370.0,
                                       child: Stack(
