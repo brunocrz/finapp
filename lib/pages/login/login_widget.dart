@@ -42,7 +42,31 @@ class _LoginWidgetState extends State<LoginWidget> {
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [],
+            children: [
+              Align(
+                alignment: AlignmentDirectional(0.0, -1.0),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                  child: Text(
+                    'Hello World',
+                    style: FlutterFlowTheme.of(context).bodyMedium,
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0.0, -1.0),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                  child: Text(
+                    'Hello World',
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Readex Pro',
+                          color: Colors.white,
+                        ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
