@@ -47,23 +47,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
-                  child: Text(
-                    'Hello World',
-                    style: FlutterFlowTheme.of(context).bodyMedium,
-                  ),
-                ),
-              ),
-              Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     onTap: () async {
-                      context.pushNamed('Login');
+                      context.pushNamed('homePage');
                     },
                     child: Text(
                       'Essa é a homepage',
@@ -73,6 +63,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                     ),
                   ),
+                ),
+              ),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
                 ),
               ),
             ],
