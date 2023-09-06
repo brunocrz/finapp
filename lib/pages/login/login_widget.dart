@@ -58,7 +58,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                   child: Text(
-                    'Hello World',
+                    'Essa é a página de login',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
                           color: Colors.white,
