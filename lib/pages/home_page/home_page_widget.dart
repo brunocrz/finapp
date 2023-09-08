@@ -59,7 +59,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset(
-                            'assets/images/Property_1=Light,_Property_2=Category.png',
+                            'assets/images/Property_1=Light,_Property_2=Setting.png',
                             width: 24.0,
                             height: 24.0,
                             fit: BoxFit.cover,
@@ -228,7 +228,226 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       ),
                     ),
                   ),
-                ].divide(SizedBox(height: 16.0)),
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Grupos',
+                            style: TextStyle(
+                              fontFamily: 'SF Pro Display',
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18.0,
+                            ),
+                          ),
+                          Text(
+                            'Ver tudo',
+                            style: TextStyle(
+                              fontFamily: 'SF Pro Display',
+                              color: Color(0xFF595F67),
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 110.0,
+                            height: 110.0,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFE0533D),
+                              borderRadius: BorderRadius.circular(16.0),
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0.00, 0.00),
+                                  child: Container(
+                                    width: 28.0,
+                                    height: 28.0,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xBEFFFFFF),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                    child: Align(
+                                      alignment:
+                                          AlignmentDirectional(0.00, 0.00),
+                                      child: Text(
+                                        'C',
+                                        textAlign: TextAlign.start,
+                                        style: TextStyle(
+                                          fontFamily: 'SF Pro Display',
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.0,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      'Casa',
+                                      style: TextStyle(
+                                        fontFamily: 'SF Pro Display',
+                                        color: Colors.white,
+                                        fontSize: 12.0,
+                                      ),
+                                    ),
+                                    Text(
+                                      'R\$ 2.530,98',
+                                      style: TextStyle(
+                                        fontFamily: 'SF Pro Display',
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 12.0,
+                                      ),
+                                    ),
+                                  ].divide(SizedBox(height: 2.0)),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 110.0,
+                            height: 110.0,
+                            decoration: BoxDecoration(
+                              color: Color(0xFF5B9B29),
+                              borderRadius: BorderRadius.circular(16.0),
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0.00, 0.00),
+                                  child: Container(
+                                    width: 28.0,
+                                    height: 28.0,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xBEFFFFFF),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                    child: Align(
+                                      alignment:
+                                          AlignmentDirectional(0.00, 0.00),
+                                      child: Text(
+                                        'S',
+                                        textAlign: TextAlign.start,
+                                        style: TextStyle(
+                                          fontFamily: 'SF Pro Display',
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.0,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      'Streamings',
+                                      style: TextStyle(
+                                        fontFamily: 'SF Pro Display',
+                                        color: Colors.white,
+                                        fontSize: 12.0,
+                                      ),
+                                    ),
+                                    Text(
+                                      'R\$ 57,90',
+                                      style: TextStyle(
+                                        fontFamily: 'SF Pro Display',
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 12.0,
+                                      ),
+                                    ),
+                                  ].divide(SizedBox(height: 2.0)),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 110.0,
+                            height: 110.0,
+                            decoration: BoxDecoration(
+                              color: Color(0xFF0091BF),
+                              borderRadius: BorderRadius.circular(16.0),
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0.00, 0.00),
+                                  child: Container(
+                                    width: 28.0,
+                                    height: 28.0,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xBEFFFFFF),
+                                      borderRadius: BorderRadius.circular(15.0),
+                                    ),
+                                    child: Align(
+                                      alignment:
+                                          AlignmentDirectional(0.00, 0.00),
+                                      child: Text(
+                                        'I',
+                                        textAlign: TextAlign.start,
+                                        style: TextStyle(
+                                          fontFamily: 'SF Pro Display',
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.0,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      'Investimentos',
+                                      style: TextStyle(
+                                        fontFamily: 'SF Pro Display',
+                                        color: Colors.white,
+                                        fontSize: 12.0,
+                                      ),
+                                    ),
+                                    Text(
+                                      'R\$ 7.000',
+                                      style: TextStyle(
+                                        fontFamily: 'SF Pro Display',
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 12.0,
+                                      ),
+                                    ),
+                                  ].divide(SizedBox(height: 2.0)),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ].divide(SizedBox(height: 8.0)),
+                  ),
+                ].divide(SizedBox(height: 18.0)),
               ),
             ),
           ),
