@@ -1,7 +1,7 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -25,11 +25,11 @@ class _LoginWidgetState extends State<LoginWidget> {
     super.initState();
     _model = createModel(context, () => LoginModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textController2 ??= TextEditingController();
+    _model.inputEmailLoginController ??= TextEditingController();
+    _model.inputSenhaLoginController ??= TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
-          _model.textController1?.text = 'Digite seu email';
-          _model.textController2?.text = 'Digite sua senha';
+          _model.inputEmailLoginController?.text = 'Digite seu email';
+          _model.inputSenhaLoginController?.text = 'Digite sua senha';
         }));
   }
 
@@ -119,14 +119,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                     child: TextFormField(
-                      controller: _model.textController1,
+                      controller: _model.inputEmailLoginController,
                       autofocus: true,
                       obscureText: false,
                       decoration: InputDecoration(
                         hintStyle:
                             FlutterFlowTheme.of(context).labelLarge.override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xFF101828),
+                                  color: Color(0xFF667085),
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -161,9 +161,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                             fontFamily: 'Readex Pro',
                             color: Color(0xFF667085),
                           ),
-                      keyboardType: TextInputType.emailAddress,
-                      validator:
-                          _model.textController1Validator.asValidator(context),
+                      textAlign: TextAlign.start,
+                      validator: _model.inputEmailLoginControllerValidator
+                          .asValidator(context),
                     ),
                   ),
                   Align(
@@ -184,13 +184,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                     child: TextFormField(
-                      controller: _model.textController2,
-                      onChanged: (_) => EasyDebounce.debounce(
-                        '_model.textController2',
-                        Duration(milliseconds: 2000),
-                        () => setState(() {}),
-                      ),
-                      obscureText: false,
+                      controller: _model.inputSenhaLoginController,
+                      obscureText: !_model.inputSenhaLoginVisibility,
                       decoration: InputDecoration(
                         hintStyle:
                             FlutterFlowTheme.of(context).labelLarge.override(
@@ -225,13 +220,26 @@ class _LoginWidgetState extends State<LoginWidget> {
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
+                        suffixIcon: InkWell(
+                          onTap: () => setState(
+                            () => _model.inputSenhaLoginVisibility =
+                                !_model.inputSenhaLoginVisibility,
+                          ),
+                          focusNode: FocusNode(skipTraversal: true),
+                          child: Icon(
+                            _model.inputSenhaLoginVisibility
+                                ? Icons.visibility_outlined
+                                : Icons.visibility_off_outlined,
+                            size: 22,
+                          ),
+                        ),
                       ),
                       style: FlutterFlowTheme.of(context).labelLarge.override(
                             fontFamily: 'Readex Pro',
                             color: Color(0xFF667085),
                           ),
-                      validator:
-                          _model.textController2Validator.asValidator(context),
+                      validator: _model.inputSenhaLoginControllerValidator
+                          .asValidator(context),
                     ),
                   ),
                   Padding(
@@ -276,13 +284,24 @@ class _LoginWidgetState extends State<LoginWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
                     child: FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        GoRouter.of(context).prepareAuthEvent();
+
+                        final user = await authManager.signInWithEmail(
+                          context,
+                          _model.inputEmailLoginController.text,
+                          _model.inputSenhaLoginController.text,
+                        );
+                        if (user == null) {
+                          return;
+                        }
+
+                        context.goNamedAuth('login', context.mounted);
                       },
                       text: 'Continuar',
                       options: FFButtonOptions(
                         width: double.infinity,
-                        height: 48.0,
+                        height: 44.0,
                         padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
