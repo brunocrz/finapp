@@ -101,14 +101,28 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text(
-                          'Olá, Bruno!',
-                          style: TextStyle(
-                            fontFamily: 'SF Pro Display',
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16.0,
-                          ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Olá, Bruno!',
+                              style: TextStyle(
+                                fontFamily: 'SF Pro Display',
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16.0,
+                              ),
+                            ),
+                            Text(
+                              'Saldo atual',
+                              style: TextStyle(
+                                fontFamily: 'SF Pro Display',
+                                color: Color(0xFF595F67),
+                                fontSize: 12.0,
+                              ),
+                            ),
+                          ],
                         ),
                         Text(
                           'R\$ 4.950,00',
@@ -117,14 +131,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 18.0,
-                          ),
-                        ),
-                        Text(
-                          'Saldo atual',
-                          style: TextStyle(
-                            fontFamily: 'SF Pro Display',
-                            color: Color(0xFF595F67),
-                            fontSize: 12.0,
                           ),
                         ),
                       ],
