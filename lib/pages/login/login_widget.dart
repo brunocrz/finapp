@@ -59,7 +59,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                   ),
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: AlignmentDirectional(0.00, -1.00),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
@@ -92,7 +92,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             color: Colors.white,
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   24.0, 32.0, 24.0, 32.0),
@@ -102,7 +102,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        AlignmentDirectional(-1.00, 0.00),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 36.0),
@@ -279,7 +280,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(1.0, 0.0),
+                                    alignment: AlignmentDirectional(1.00, 0.00),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 30.0),
@@ -355,8 +356,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             AlignmentDirectional(0.0, 0.0),
                                         children: [
                                           Align(
-                                            alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                            alignment: AlignmentDirectional(
+                                                0.00, 0.00),
                                             child: Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
@@ -371,8 +372,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             ),
                                           ),
                                           Align(
-                                            alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                            alignment: AlignmentDirectional(
+                                                0.00, 0.00),
                                             child: Container(
                                               width: 105.0,
                                               height: 32.0,
@@ -380,7 +381,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                 color: Colors.white,
                                               ),
                                               alignment: AlignmentDirectional(
-                                                  0.0, 0.0),
+                                                  0.00, 0.00),
                                               child: Text(
                                                 'ou entre com',
                                                 style: TextStyle(
@@ -504,11 +505,13 @@ class _LoginWidgetState extends State<LoginWidget> {
 
                                   // You will have to add an action on this rich text to go to your login page.
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.00, 0.00),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 0.0, 12.0),
                                       child: RichText(
+                                        textScaleFactor: MediaQuery.of(context)
+                                            .textScaleFactor,
                                         text: TextSpan(
                                           children: [
                                             TextSpan(

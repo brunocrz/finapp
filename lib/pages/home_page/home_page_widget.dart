@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -37,35 +38,30 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Color(0xFFF8F8F8),
         body: SafeArea(
           top: true,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
-                  child: InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      context.pushNamed('login');
-                    },
-                    child: Text(
-                      'Essa é a homepage',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            color: Colors.white,
-                          ),
-                    ),
+          child: Align(
+            alignment: AlignmentDirectional(0.00, -1.00),
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+              child: ListView(
+                padding: EdgeInsets.zero,
+                scrollDirection: Axis.vertical,
+                children: [
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Icon(
+                        Icons.menu,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 24.0,
+                      ),
+                    ],
                   ),
-                ),
+                ].divide(SizedBox(height: 18.0)),
               ),
-            ],
+            ),
           ),
         ),
       ),
