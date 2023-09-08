@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -28,7 +29,7 @@ class _LoginWidgetState extends State<LoginWidget> {
     _model.textController2 ??= TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
           _model.textController1?.text = 'Digite seu email';
-          _model.textController2?.text = 'Digite seu email';
+          _model.textController2?.text = 'Digite sua senha';
         }));
   }
 
@@ -89,7 +90,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                     alignment: AlignmentDirectional(-1.00, -1.00),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
                       child: Text(
                         'Insira suas credenciasis para continuar.',
                         style: FlutterFlowTheme.of(context).titleSmall.override(
@@ -158,8 +159,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                       style: FlutterFlowTheme.of(context).labelLarge.override(
                             fontFamily: 'Readex Pro',
-                            color: Color(0xFF475467),
+                            color: Color(0xFF667085),
                           ),
+                      keyboardType: TextInputType.emailAddress,
                       validator:
                           _model.textController1Validator.asValidator(context),
                     ),
@@ -183,7 +185,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                     child: TextFormField(
                       controller: _model.textController2,
-                      autofocus: true,
+                      onChanged: (_) => EasyDebounce.debounce(
+                        '_model.textController2',
+                        Duration(milliseconds: 2000),
+                        () => setState(() {}),
+                      ),
                       obscureText: false,
                       decoration: InputDecoration(
                         hintStyle:
@@ -222,11 +228,101 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                       style: FlutterFlowTheme.of(context).labelLarge.override(
                             fontFamily: 'Readex Pro',
-                            color: Color(0xFF475467),
+                            color: Color(0xFF667085),
                           ),
                       validator:
                           _model.textController2Validator.asValidator(context),
                     ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Icon(
+                              Icons.check_box_outline_blank,
+                              color: Color(0xFFD0D5DD),
+                              size: 20.0,
+                            ),
+                            Text(
+                              'Permanecer conectado',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Color(0xFF101828),
+                                  ),
+                            ),
+                          ].divide(SizedBox(width: 4.0)),
+                        ),
+                        Text(
+                          'Esqueci a senha',
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Color(0xFF7F56D9),
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
+                    child: FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: 'Continuar',
+                      options: FFButtonOptions(
+                        width: double.infinity,
+                        height: 48.0,
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            24.0, 0.0, 24.0, 0.0),
+                        iconPadding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: Color(0xFF7F56D9),
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleSmall.override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                        elevation: 3.0,
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Ainda não é cadastrado?',
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Readex Pro',
+                              color: Color(0xFF101828),
+                            ),
+                      ),
+                      Text(
+                        ' Crie uma conta',
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Readex Pro',
+                              color: Color(0xFF7F56D9),
+                              fontWeight: FontWeight.w600,
+                            ),
+                      ),
+                    ],
                   ),
                 ].divide(SizedBox(height: 0.0)),
               ),
