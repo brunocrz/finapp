@@ -289,6 +289,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
                                           fontFamily: 'SF Pro Display',
+                                          color: Colors.black,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16.0,
                                         ),
@@ -350,6 +351,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
                                           fontFamily: 'SF Pro Display',
+                                          color: Colors.black,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16.0,
                                         ),
@@ -411,6 +413,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
                                           fontFamily: 'SF Pro Display',
+                                          color: Colors.black,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16.0,
                                         ),
