@@ -364,7 +364,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
                     child: Container(
                       width: double.infinity,
                       child: TextFormField(
@@ -430,8 +430,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                     child: FFButtonWidget(
                       onPressed: () async {
                         GoRouter.of(context).prepareAuthEvent();
@@ -491,7 +490,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
                     child: RichText(
                       textScaleFactor: MediaQuery.of(context).textScaleFactor,
                       text: TextSpan(
@@ -558,26 +557,37 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Ainda não é cadastrado?',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
-                              color: Color(0xFF101828),
-                            ),
-                      ),
-                      Text(
-                        ' Crie uma conta',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
-                              color: Color(0xFF7F56D9),
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                    ],
+                  RichText(
+                    textScaleFactor: MediaQuery.of(context).textScaleFactor,
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Já tem cadastro? ',
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Color(0xFF101828),
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                        ),
+                        TextSpan(
+                          text: 'Entre com sua conta',
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Color(0xFF7F56D9),
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                          mouseCursor: SystemMouseCursors.click,
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () async {
+                              context.pushNamed('login');
+                            },
+                        )
+                      ],
+                      style: FlutterFlowTheme.of(context).bodyMedium,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
                 ],
               ),

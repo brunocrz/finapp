@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -326,26 +327,37 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                     ),
                   ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Ainda não é cadastrado?',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
-                              color: Color(0xFF101828),
-                            ),
-                      ),
-                      Text(
-                        ' Crie uma conta',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
-                              color: Color(0xFF7F56D9),
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                    ],
+                  RichText(
+                    textScaleFactor: MediaQuery.of(context).textScaleFactor,
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Ainda não é cadastrado?',
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Color(0xFF101828),
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                        ),
+                        TextSpan(
+                          text: ' Crie uma conta',
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Color(0xFF7F56D9),
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                          mouseCursor: SystemMouseCursors.click,
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () async {
+                              context.pushNamed('cadastro');
+                            },
+                        )
+                      ],
+                      style: FlutterFlowTheme.of(context).bodyMedium,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
                 ],
               ),
