@@ -160,7 +160,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                               fontFamily: 'Readex Pro',
                               color: Color(0xFF475467),
                             ),
-                        textAlign: TextAlign.start,
                         validator: _model.inputEmailLoginControllerValidator
                             .asValidator(context),
                       ),
@@ -187,6 +186,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       width: double.infinity,
                       child: TextFormField(
                         controller: _model.inputSenhaLoginController,
+                        autofocus: true,
                         obscureText: !_model.inputSenhaLoginVisibility,
                         decoration: InputDecoration(
                           hintStyle:
