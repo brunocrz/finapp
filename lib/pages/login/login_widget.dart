@@ -49,8 +49,9 @@ class _LoginWidgetState extends State<LoginWidget> {
             alignment: AlignmentDirectional(-1.00, -1.00),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(40.0, 40.0, 40.0, 40.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
+              child: ListView(
+                padding: EdgeInsets.zero,
+                scrollDirection: Axis.vertical,
                 children: [
                   Align(
                     alignment: AlignmentDirectional(0.00, 0.00),
@@ -304,7 +305,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       text: 'Continuar',
                       options: FFButtonOptions(
                         width: double.infinity,
-                        height: 44.0,
+                        height: 48.0,
                         padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
@@ -319,7 +320,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                         elevation: 3.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,
-                          width: 1.0,
+                          width: 0.0,
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
@@ -346,7 +347,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                     ],
                   ),
-                ].divide(SizedBox(height: 0.0)),
+                ],
               ),
             ),
           ),
