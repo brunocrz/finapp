@@ -122,31 +122,35 @@ class _LoginWidgetState extends State<LoginWidget> {
                       autofocus: true,
                       obscureText: false,
                       decoration: InputDecoration(
-                        hintStyle: FlutterFlowTheme.of(context).labelLarge,
+                        hintStyle:
+                            FlutterFlowTheme.of(context).labelLarge.override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Color(0xFF101828),
+                                ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).alternate,
+                            color: Color(0xFFD0D5DD),
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).primary,
+                            color: Color(0xFF7F56D9),
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         errorBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).error,
+                            color: Color(0xFFD92D20),
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         focusedErrorBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).error,
+                            color: Color(0xFFD92D20),
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
@@ -182,31 +186,35 @@ class _LoginWidgetState extends State<LoginWidget> {
                       autofocus: true,
                       obscureText: false,
                       decoration: InputDecoration(
-                        hintStyle: FlutterFlowTheme.of(context).labelLarge,
+                        hintStyle:
+                            FlutterFlowTheme.of(context).labelLarge.override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Color(0xFF101828),
+                                ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).alternate,
+                            color: Color(0xFFD0D5DD),
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).primary,
+                            color: Color(0xFF7F56D9),
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         errorBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).error,
+                            color: Color(0xFFD92D20),
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         focusedErrorBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color: FlutterFlowTheme.of(context).error,
+                            color: Color(0xFFD92D20),
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
