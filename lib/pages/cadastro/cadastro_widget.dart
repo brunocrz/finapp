@@ -504,6 +504,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                 .override(
                                   fontFamily: 'Readex Pro',
                                   color: Color(0xFF475467),
+                                  fontSize: 12.0,
                                   fontWeight: FontWeight.normal,
                                 ),
                           ),
@@ -514,6 +515,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                 .override(
                                   fontFamily: 'Readex Pro',
                                   color: Color(0xFF7F56D9),
+                                  fontSize: 14.0,
                                 ),
                           ),
                           TextSpan(
@@ -523,6 +525,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                 .override(
                                   fontFamily: 'Readex Pro',
                                   color: Color(0xFF475467),
+                                  fontSize: 12.0,
                                   fontWeight: FontWeight.normal,
                                 ),
                           ),
@@ -533,6 +536,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                 .override(
                                   fontFamily: 'Readex Pro',
                                   color: Color(0xFF7F56D9),
+                                  fontSize: 14.0,
                                 ),
                           ),
                           TextSpan(
@@ -541,6 +545,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                                 .titleSmall
                                 .override(
                                   fontFamily: 'Readex Pro',
+                                  fontSize: 12.0,
                                   fontWeight: FontWeight.normal,
                                 ),
                           )
