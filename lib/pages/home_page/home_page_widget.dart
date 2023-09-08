@@ -551,9 +551,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       lineHeight: 7.0,
                                       animation: false,
                                       progressColor: Colors.black,
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context)
-                                              .alternate,
+                                      backgroundColor: Color(0xFFE8ECF4),
                                       barRadius: Radius.circular(15.0),
                                       padding: EdgeInsets.zero,
                                     ),
@@ -627,9 +625,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       lineHeight: 7.0,
                                       animation: false,
                                       progressColor: Colors.black,
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context)
-                                              .alternate,
+                                      backgroundColor: Color(0xFFE8ECF4),
                                       barRadius: Radius.circular(15.0),
                                       padding: EdgeInsets.zero,
                                     ),
@@ -712,9 +708,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       lineHeight: 7.0,
                                       animation: false,
                                       progressColor: Colors.black,
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context)
-                                              .alternate,
+                                      backgroundColor: Color(0xFFE8ECF4),
                                       barRadius: Radius.circular(15.0),
                                       padding: EdgeInsets.zero,
                                     ),
@@ -788,9 +782,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       lineHeight: 7.0,
                                       animation: false,
                                       progressColor: Colors.black,
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context)
-                                              .alternate,
+                                      backgroundColor: Color(0xFFE8ECF4),
                                       barRadius: Radius.circular(15.0),
                                       padding: EdgeInsets.zero,
                                     ),
