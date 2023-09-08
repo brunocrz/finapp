@@ -230,7 +230,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                             _model.inputSenhaLoginVisibility
                                 ? Icons.visibility_outlined
                                 : Icons.visibility_off_outlined,
-                            size: 22,
+                            color: Color(0xFF475467),
+                            size: 24.0,
                           ),
                         ),
                       ),
