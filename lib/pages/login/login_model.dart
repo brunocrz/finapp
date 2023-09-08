@@ -10,8 +10,11 @@ class LoginModel extends FlutterFlowModel {
 
   final unfocusNode = FocusNode();
   // State field(s) for TextField widget.
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  TextEditingController? textController1;
+  String? Function(BuildContext, String?)? textController1Validator;
+  // State field(s) for TextField widget.
+  TextEditingController? textController2;
+  String? Function(BuildContext, String?)? textController2Validator;
 
   /// Initialization and disposal methods.
 
@@ -19,7 +22,8 @@ class LoginModel extends FlutterFlowModel {
 
   void dispose() {
     unfocusNode.dispose();
-    textController?.dispose();
+    textController1?.dispose();
+    textController2?.dispose();
   }
 
   /// Action blocks are added here.

@@ -24,9 +24,11 @@ class _LoginWidgetState extends State<LoginWidget> {
     super.initState();
     _model = createModel(context, () => LoginModel());
 
-    _model.textController ??= TextEditingController();
+    _model.textController1 ??= TextEditingController();
+    _model.textController2 ??= TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
-          _model.textController?.text = 'Digite seu email';
+          _model.textController1?.text = 'Digite seu email';
+          _model.textController2?.text = 'Digite seu email';
         }));
   }
 
@@ -74,13 +76,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 4.0),
                       child: Text(
                         'Olá, seja bem-vindo!',
-                        style: FlutterFlowTheme.of(context)
-                            .titleMedium
-                            .override(
-                              fontFamily: 'Inter',
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              fontWeight: FontWeight.w600,
-                            ),
+                        style:
+                            FlutterFlowTheme.of(context).titleMedium.override(
+                                  fontFamily: 'Inter',
+                                  color: Color(0xFF101828),
+                                  fontWeight: FontWeight.w600,
+                                ),
                       ),
                     ),
                   ),
@@ -93,6 +94,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                         'Insira suas credenciasis para continuar.',
                         style: FlutterFlowTheme.of(context).titleSmall.override(
                               fontFamily: 'Readex Pro',
+                              color: Color(0xFF475467),
                               fontWeight: FontWeight.normal,
                             ),
                       ),
@@ -107,49 +109,116 @@ class _LoginWidgetState extends State<LoginWidget> {
                         'Email',
                         style: FlutterFlowTheme.of(context).labelLarge.override(
                               fontFamily: 'Readex Pro',
-                              color: FlutterFlowTheme.of(context).primaryText,
+                              color: Color(0xFF101828),
                             ),
                       ),
                     ),
                   ),
-                  TextFormField(
-                    controller: _model.textController,
-                    autofocus: true,
-                    obscureText: false,
-                    decoration: InputDecoration(
-                      hintStyle: FlutterFlowTheme.of(context).labelLarge,
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).alternate,
-                          width: 1.0,
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                    child: TextFormField(
+                      controller: _model.textController1,
+                      autofocus: true,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        hintStyle: FlutterFlowTheme.of(context).labelLarge,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).alternate,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).primary,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).error,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).error,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
                       ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).primary,
-                          width: 1.0,
-                        ),
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      errorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).error,
-                          width: 1.0,
-                        ),
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).error,
-                          width: 1.0,
-                        ),
-                        borderRadius: BorderRadius.circular(8.0),
+                      style: FlutterFlowTheme.of(context).labelLarge.override(
+                            fontFamily: 'Readex Pro',
+                            color: Color(0xFF475467),
+                          ),
+                      validator:
+                          _model.textController1Validator.asValidator(context),
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(-1.00, -1.00),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 6.0),
+                      child: Text(
+                        'Senha',
+                        style: FlutterFlowTheme.of(context).labelLarge.override(
+                              fontFamily: 'Readex Pro',
+                              color: Color(0xFF101828),
+                            ),
                       ),
                     ),
-                    style: FlutterFlowTheme.of(context).labelLarge,
-                    validator:
-                        _model.textControllerValidator.asValidator(context),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                    child: TextFormField(
+                      controller: _model.textController2,
+                      autofocus: true,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        hintStyle: FlutterFlowTheme.of(context).labelLarge,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).alternate,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).primary,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).error,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).error,
+                            width: 1.0,
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                      ),
+                      style: FlutterFlowTheme.of(context).labelLarge.override(
+                            fontFamily: 'Readex Pro',
+                            color: Color(0xFF475467),
+                          ),
+                      validator:
+                          _model.textController2Validator.asValidator(context),
+                    ),
                   ),
                 ].divide(SizedBox(height: 0.0)),
               ),
