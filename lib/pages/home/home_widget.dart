@@ -89,7 +89,11 @@ class _HomeWidgetState extends State<HomeWidget> {
                 ),
                 FFButtonWidget(
                   onPressed: () async {
-                    context.pushNamed('login');
+                    GoRouter.of(context).prepareAuthEvent();
+                    await authManager.signOut();
+                    GoRouter.of(context).clearRedirectLocation();
+
+                    context.pushNamedAuth('login', context.mounted);
                   },
                   text: 'Login',
                   options: FFButtonOptions(
