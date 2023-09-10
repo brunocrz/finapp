@@ -49,7 +49,7 @@ class _LoginWidgetState extends State<LoginWidget> {
           child: Align(
             alignment: AlignmentDirectional(-1.00, -1.00),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(40.0, 40.0, 40.0, 40.0),
+              padding: EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 40.0, 0.0),
               child: ListView(
                 padding: EdgeInsets.zero,
                 scrollDirection: Axis.vertical,
@@ -58,7 +58,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                     alignment: AlignmentDirectional(0.00, 0.00),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 40.0),
                       child: Image.asset(
                         'assets/images/logoQuotient.png',
                         width: 177.0,
@@ -247,34 +247,22 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Icon(
-                              Icons.check_box_outline_blank,
-                              color: Color(0xFFD0D5DD),
-                              size: 20.0,
-                            ),
-                            Text(
-                              'Permanecer conectado',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Color(0xFF101828),
-                                  ),
-                            ),
-                          ].divide(SizedBox(width: 4.0)),
-                        ),
-                        Text(
+                  Align(
+                    alignment: AlignmentDirectional(1.00, -1.00),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 24.0),
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          context.pushNamed('recuperarSenha');
+                        },
+                        child: Text(
                           'Esqueci a senha',
+                          textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
@@ -282,7 +270,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     fontWeight: FontWeight.w600,
                                   ),
                         ),
-                      ],
+                      ),
                     ),
                   ),
                   Padding(
@@ -327,37 +315,43 @@ class _LoginWidgetState extends State<LoginWidget> {
                       ),
                     ),
                   ),
-                  RichText(
-                    textScaleFactor: MediaQuery.of(context).textScaleFactor,
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Ainda não é cadastrado?',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Color(0xFF101828),
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                        ),
-                        TextSpan(
-                          text: ' Crie uma conta',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Color(0xFF7F56D9),
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                          mouseCursor: SystemMouseCursors.click,
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () async {
-                              context.pushNamed('cadastro');
-                            },
-                        )
-                      ],
-                      style: FlutterFlowTheme.of(context).bodyMedium,
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
+                    child: RichText(
+                      textScaleFactor: MediaQuery.of(context).textScaleFactor,
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'Ainda não é cadastrado?',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Color(0xFF101828),
+                                  fontWeight: FontWeight.normal,
+                                ),
+                          ),
+                          TextSpan(
+                            text: ' Crie uma conta',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Color(0xFF7F56D9),
+                                  fontWeight: FontWeight.w600,
+                                ),
+                            mouseCursor: SystemMouseCursors.click,
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () async {
+                                context.pushNamed('cadastro');
+                              },
+                          )
+                        ],
+                        style: FlutterFlowTheme.of(context).bodyMedium,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 ],
               ),

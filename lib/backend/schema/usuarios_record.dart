@@ -51,15 +51,15 @@ class UsuariosRecord extends FirestoreRecord {
   DateTime? get editedTime => _editedTime;
   bool hasEditedTime() => _editedTime != null;
 
-  // "bio" field.
-  String? _bio;
-  String get bio => _bio ?? '';
-  bool hasBio() => _bio != null;
-
   // "user_name" field.
   String? _userName;
   String get userName => _userName ?? '';
   bool hasUserName() => _userName != null;
+
+  // "display_surname" field.
+  String? _displaySurname;
+  String get displaySurname => _displaySurname ?? '';
+  bool hasDisplaySurname() => _displaySurname != null;
 
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
@@ -69,8 +69,8 @@ class UsuariosRecord extends FirestoreRecord {
     _createdTime = snapshotData['created_time'] as DateTime?;
     _phoneNumber = snapshotData['phone_number'] as String?;
     _editedTime = snapshotData['edited_time'] as DateTime?;
-    _bio = snapshotData['bio'] as String?;
     _userName = snapshotData['user_name'] as String?;
+    _displaySurname = snapshotData['display_surname'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -115,8 +115,8 @@ Map<String, dynamic> createUsuariosRecordData({
   DateTime? createdTime,
   String? phoneNumber,
   DateTime? editedTime,
-  String? bio,
   String? userName,
+  String? displaySurname,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -127,8 +127,8 @@ Map<String, dynamic> createUsuariosRecordData({
       'created_time': createdTime,
       'phone_number': phoneNumber,
       'edited_time': editedTime,
-      'bio': bio,
       'user_name': userName,
+      'display_surname': displaySurname,
     }.withoutNulls,
   );
 
@@ -147,8 +147,8 @@ class UsuariosRecordDocumentEquality implements Equality<UsuariosRecord> {
         e1?.createdTime == e2?.createdTime &&
         e1?.phoneNumber == e2?.phoneNumber &&
         e1?.editedTime == e2?.editedTime &&
-        e1?.bio == e2?.bio &&
-        e1?.userName == e2?.userName;
+        e1?.userName == e2?.userName &&
+        e1?.displaySurname == e2?.displaySurname;
   }
 
   @override
@@ -160,8 +160,8 @@ class UsuariosRecordDocumentEquality implements Equality<UsuariosRecord> {
         e?.createdTime,
         e?.phoneNumber,
         e?.editedTime,
-        e?.bio,
-        e?.userName
+        e?.userName,
+        e?.displaySurname
       ]);
 
   @override

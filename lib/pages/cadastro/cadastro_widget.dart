@@ -1,5 +1,4 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -27,7 +26,6 @@ class _CadastroWidgetState extends State<CadastroWidget> {
     super.initState();
     _model = createModel(context, () => CadastroModel());
 
-    _model.inputNomeCadastroController ??= TextEditingController();
     _model.inputEmailCadastroController ??= TextEditingController();
     _model.inputSenhaCadastroController ??= TextEditingController();
     _model.inputConfirmarSenhaCadastroController ??= TextEditingController();
@@ -52,7 +50,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
           child: Align(
             alignment: AlignmentDirectional(-1.00, -1.00),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(40.0, 40.0, 40.0, 40.0),
+              padding: EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 40.0, 40.0),
               child: ListView(
                 padding: EdgeInsets.zero,
                 scrollDirection: Axis.vertical,
@@ -61,7 +59,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                     alignment: AlignmentDirectional(0.00, 0.00),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 40.0),
                       child: Image.asset(
                         'assets/images/logoQuotient.png',
                         width: 177.0,
@@ -116,7 +114,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                           ),
                           TextSpan(
                             text:
-                                'Pode ficar tranquilo, não pedimos seu cartão de crédito! :)',
+                                'Fique tranquilo, não pedimos cartão de crédito! :)',
                             style: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -131,69 +129,6 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                               color: Color(0xFF475467),
                               fontWeight: FontWeight.normal,
                             ),
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: AlignmentDirectional(-1.00, -1.00),
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 6.0),
-                      child: Text(
-                        'Nome Completo',
-                        style: FlutterFlowTheme.of(context).labelLarge.override(
-                              fontFamily: 'Readex Pro',
-                              color: Color(0xFF101828),
-                            ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                    child: Container(
-                      width: double.infinity,
-                      child: TextFormField(
-                        controller: _model.inputNomeCadastroController,
-                        autofocus: true,
-                        obscureText: false,
-                        decoration: InputDecoration(
-                          hintStyle: FlutterFlowTheme.of(context).labelLarge,
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0xFFD0D5DD),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0xFF7F56D9),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          errorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0xFFD92D20),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          focusedErrorBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0xFFD92D20),
-                              width: 2.0,
-                            ),
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                        ),
-                        style: FlutterFlowTheme.of(context).labelLarge.override(
-                              fontFamily: 'Readex Pro',
-                              color: Color(0xFF475467),
-                            ),
-                        validator: _model.inputNomeCadastroControllerValidator
-                            .asValidator(context),
                       ),
                     ),
                   ),
@@ -281,6 +216,7 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                       child: TextFormField(
                         controller: _model.inputSenhaCadastroController,
                         autofocus: true,
+                        textCapitalization: TextCapitalization.none,
                         obscureText: !_model.inputSenhaCadastroVisibility,
                         decoration: InputDecoration(
                           hintStyle: FlutterFlowTheme.of(context).labelLarge,
@@ -455,13 +391,6 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                           return;
                         }
 
-                        await UsuariosRecord.collection
-                            .doc(user.uid)
-                            .update(createUsuariosRecordData(
-                              displayName:
-                                  _model.inputNomeCadastroController.text,
-                            ));
-
                         context.goNamedAuth('login', context.mounted);
                       },
                       text: 'Criar conta',
@@ -557,37 +486,43 @@ class _CadastroWidgetState extends State<CadastroWidget> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  RichText(
-                    textScaleFactor: MediaQuery.of(context).textScaleFactor,
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Já tem cadastro? ',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Color(0xFF101828),
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                        ),
-                        TextSpan(
-                          text: 'Entre com sua conta',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    color: Color(0xFF7F56D9),
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                          mouseCursor: SystemMouseCursors.click,
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () async {
-                              context.pushNamed('login');
-                            },
-                        )
-                      ],
-                      style: FlutterFlowTheme.of(context).bodyMedium,
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
+                    child: RichText(
+                      textScaleFactor: MediaQuery.of(context).textScaleFactor,
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'Já tem cadastro? ',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Color(0xFF101828),
+                                  fontWeight: FontWeight.normal,
+                                ),
+                          ),
+                          TextSpan(
+                            text: 'Entre com sua conta',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Readex Pro',
+                                  color: Color(0xFF7F56D9),
+                                  fontWeight: FontWeight.w600,
+                                ),
+                            mouseCursor: SystemMouseCursors.click,
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () async {
+                                context.pushNamed('login');
+                              },
+                          )
+                        ],
+                        style: FlutterFlowTheme.of(context).bodyMedium,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 ],
               ),

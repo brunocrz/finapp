@@ -1,5 +1,4 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -12,9 +11,6 @@ class CadastroModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for inputNomeCadastro widget.
-  TextEditingController? inputNomeCadastroController;
-  String? Function(BuildContext, String?)? inputNomeCadastroControllerValidator;
   // State field(s) for inputEmailCadastro widget.
   TextEditingController? inputEmailCadastroController;
   String? Function(BuildContext, String?)?
@@ -39,7 +35,6 @@ class CadastroModel extends FlutterFlowModel {
 
   void dispose() {
     unfocusNode.dispose();
-    inputNomeCadastroController?.dispose();
     inputEmailCadastroController?.dispose();
     inputSenhaCadastroController?.dispose();
     inputConfirmarSenhaCadastroController?.dispose();
